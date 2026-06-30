@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Frontend build artifacts
+frontend/dist/
+
+# .NET build artifacts
+bin/
+obj/
+
+# Local environment files
+.env
+.env.*
+
+# IDE and OS files
+.vs/
+.vscode/
+*.user
+*.suo
+Thumbs.db
+.DS_Store

@@ -1,0 +1,53 @@
+---
+description: Diretrizes gerais do projeto Batel MS
+alwaysApply: true
+---
+
+# Diretrizes do Batel MS
+
+Este projeto fullstack se chama Batel MS. Mantenha as decisões técnicas consistentes com as diretrizes abaixo.
+
+- Responda e documente preferencialmente em português, salvo quando nomes técnicos, APIs ou bibliotecas exigirem inglês.
+- Sempre que houver textos visíveis ao usuário, mensagens de erro, labels, documentação ou comentários em português, escreva com acentuação e gramática corretas.
+- No frontend, use Vue 3 com Options API como padrão para componentes.
+- Use TypeScript em todo código novo do frontend e mantenha tipagem clara para dados, props, eventos e retornos.
+- Use CSS global centralizado em `frontend/src/style.css` para estilos base, reset, tokens visuais e classes compartilhadas.
+- Use Tailwind CSS para utilities pontuais e layout rápido, mantendo tokens e estilos compartilhados no CSS global.
+- Use PrimeVue como biblioteca principal de componentes visuais com o preset de tema Lara.
+- Use ícones do Lucide como primeira opção e PrimeIcons como segunda opção quando fizer sentido com componentes PrimeVue.
+- Use Pinia para estado global e Vue Router para rotas.
+- Use ESLint para validar padrões de código no frontend.
+- Use o alias `@` para imports a partir de `frontend/src`.
+- Use a Fetch API nativa para chamadas HTTP, preferencialmente via `frontend/src/services/httpClient.ts`; não adicione Axios.
+- Para respostas HTTP `401` e `404`, use as rotas `/401` e `/404` do frontend.
+- No backend, use ASP.NET Core com .NET 10, estrutura tradicional com controllers e sem Minimal API.
+- No backend, use Entity Framework Core com PostgreSQL para acesso ao banco de dados e registre o `DbContext` no container de dependências.
+- Evite adicionar estilos locais em componentes sem necessidade; prefira classes semânticas reutilizáveis no CSS global.
+- Preserve a estrutura inicial do projeto: `frontend`, `backend` e `database`.
+- Antes de adicionar novas bibliotecas, verifique se o padrão atual do projeto já resolve o problema.
+- Mantenha componentes simples, legíveis e alinhados ao escopo funcional solicitado.
+
+## Padrão De Componente Vue
+
+Use este formato como referência para componentes Vue:
+
+```vue
+<template>
+  <section class="example-section">
+    <h1>{{ title }}</h1>
+  </section>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'ExampleComponent',
+  data() {
+    return {
+      title: 'Batel MS'
+    }
+  }
+})
+</script>
+```

@@ -30,3 +30,9 @@ Endpoint de saúde:
 ```http
 GET /api/health
 ```
+
+Documentação Swagger em desenvolvimento:
+
+```http
+GET /swagger
+```

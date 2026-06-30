@@ -22,6 +22,9 @@ Este projeto fullstack se chama Batel MS. Mantenha as decisões técnicas consis
 - Para respostas HTTP `401` e `404`, use as rotas `/401` e `/404` do frontend.
 - No backend, use ASP.NET Core com .NET 10, estrutura tradicional com controllers e sem Minimal API.
 - No backend, use Entity Framework Core com PostgreSQL para acesso ao banco de dados e registre o `DbContext` no container de dependências.
+- No backend, entidades ligadas ao banco devem ficar em `backend/src/BatelMS.Api/Entities/<NomeDaTabela>` com arquivos parciais `<Entidade>.Model.cs`, `<Entidade>.DTO.cs`, `<Entidade>.Service.cs` e `<Entidade>.SQL.cs` quando houver SQL direto.
+- Use Entity Framework Core como padrão para acesso a dados; use procedures, functions ou SQL direto apenas quando a necessidade for explícita.
+- No backend, helpers e códigos reutilizados por mais de uma classe devem ficar em `backend/src/BatelMS.Api/Common`.
 - Evite adicionar estilos locais em componentes sem necessidade; prefira classes semânticas reutilizáveis no CSS global.
 - Preserve a estrutura inicial do projeto: `frontend`, `backend` e `database`.
 - Antes de adicionar novas bibliotecas, verifique se o padrão atual do projeto já resolve o problema.
